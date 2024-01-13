@@ -40,3 +40,20 @@ console.log(HungerGames.availability);
 
 HungerGames.sell(17);
 console.log(HungerGames.availability);
+
+//Second challenge
+class TechnicalBook extends Book {
+    constructor(title, author, ISBN, numCopies, edition) {
+        super(title, author, ISBN, numCopies); //Collects the arguments from the parent constructor
+        this.edition = edition; //the 5th argument for this second challenge
+    }
+        getEdition(){
+            return `The current version of this book is ${this.edition}`;
+        }
+}
+
+//Test 2
+const newBook = new TechnicalBook("Javascript All-in-One For Dummies", "Chris Minnick", 1119906830, 10, "1.");
+console.log(newBook.availability);
+console.log(newBook.getEdition());
+console.log(newBook);
